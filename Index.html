@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Smash</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--Q=81
+        W=87
+        E=69
+        R=82
+        T=84
+        Y=89
+        U=85
+        I=73
+        O=79
+        P=80
+        A=65
+        S=83
+        D=68
+        F=70
+        G=71
+        H=72
+        J=74
+        K=75
+        L=76
+        Ñ=192
+        Z=90
+        X=88
+        C=67
+        V=86
+        B=66
+        N=78
+        M=77
+        -->
+    <div style="height: 25vh"></div>
+    <!--This is just so it takes space and the keys are not as separated :p-->
+    <div class="keys">
+      <div data-key="81" class="key">
+        <kbd>Q</kbd>
+        <span class="sound">Note</span>
+      </div>
+      <div data-key="87" class="key">
+        <kbd>W</kbd>
+        <span class="sound">Violin</span>
+      </div>
+      <div data-key="69" class="key">
+        <kbd>E</kbd>
+        <span class="sound">Bird</span>
+      </div>
+      <div data-key="82" class="key">
+        <kbd>R</kbd>
+        <span class="sound">Page</span>
+      </div>
+      <div data-key="84" class="key">
+        <kbd>T</kbd>
+        <span class="sound">Roar</span>
+      </div>
+      <div data-key="89" class="key">
+        <kbd>Y</kbd>
+        <span class="sound">Whistle</span>
+      </div>
+      <div data-key="85" class="key">
+        <kbd>U</kbd>
+        <span class="sound">Sweep</span>
+      </div>
+      <div data-key="73" class="key">
+        <kbd>I</kbd>
+        <span class="sound">Deep</span>
+      </div>
+      <div data-key="79" class="key">
+        <kbd>O</kbd>
+        <span class="sound">Happy</span>
+      </div>
+      <div data-key="80" class="key">
+        <kbd>P</kbd>
+        <span class="sound">Magnet</span>
+      </div>
+    </div>
+    <div class="keys">
+      <div data-key="65" class="key">
+        <kbd>A</kbd>
+        <span class="sound">Alert</span>
+      </div>
+      <div data-key="83" class="key">
+        <kbd>S</kbd>
+        <span class="sound">Punch</span>
+      </div>
+      <div data-key="68" class="key">
+        <kbd>D</kbd>
+        <span class="sound">Bike</span>
+      </div>
+      <div data-key="70" class="key">
+        <kbd>F</kbd>
+        <span class="sound">Car</span>
+      </div>
+      <div data-key="71" class="key">
+        <kbd>G</kbd>
+        <span class="sound">Chord</span>
+      </div>
+      <div data-key="72" class="key">
+        <kbd>H</kbd>
+        <span class="sound">Cup</span>
+      </div>
+      <div data-key="74" class="key">
+        <kbd>J</kbd>
+        <span class="sound">Doorbell</span>
+      </div>
+      <div data-key="75" class="key">
+        <kbd>K</kbd>
+        <span class="sound">Drum</span>
+      </div>
+      <div data-key="76" class="key">
+        <kbd>L</kbd>
+        <span class="sound">Fall</span>
+      </div>
+      <div data-key="192" class="key">
+        <kbd>Ñ</kbd>
+        <span class="sound">Woosh</span>
+      </div>
+    </div>
+    <div class="keys">
+      <div data-key="90" class="key">
+        <kbd>Z</kbd>
+        <span class="sound">Wood</span>
+      </div>
+      <div data-key="88" class="key">
+        <kbd>X</kbd>
+        <span class="sound">Water</span>
+      </div>
+      <div data-key="67" class="key">
+        <kbd>C</kbd>
+        <span class="sound">Bell</span>
+      </div>
+      <div data-key="86" class="key">
+        <kbd>V</kbd>
+        <span class="sound">Train</span>
+      </div>
+      <div data-key="66" class="key">
+        <kbd>B</kbd>
+        <span class="sound">Bass</span>
+      </div>
+      <div data-key="78" class="key">
+        <kbd>N</kbd>
+        <span class="sound">Guitar</span>
+      </div>
+      <div data-key="77" class="key">
+        <kbd>M</kbd>
+        <span class="sound">Flute</span>
+      </div>
+    </div>
+    <audio data-key="65" src="Sounds/alert.wav"></audio>
+    <audio data-key="66" src="Sounds/bass.wav"></audio>
+    <audio data-key="67" src="Sounds/bell.wav"></audio>
+    <audio data-key="68" src="Sounds/bike.wav"></audio>
+    <audio data-key="69" src="Sounds/bird.wav"></audio>
+    <audio data-key="70" src="Sounds/car.wav"></audio>
+    <audio data-key="71" src="Sounds/chord.wav"></audio>
+    <audio data-key="72" src="Sounds/cup.wav"></audio>
+    <audio data-key="73" src="Sounds/deep.wav"></audio>
+    <audio data-key="74" src="Sounds/doorbell.wav"></audio>
+    <audio data-key="75" src="Sounds/drum.wav"></audio>
+    <audio data-key="76" src="Sounds/fall.wav"></audio>
+    <audio data-key="77" src="Sounds/flute.wav"></audio>
+    <audio data-key="78" src="Sounds/guitar.wav"></audio>
+    <audio data-key="79" src="Sounds/happy.wav"></audio>
+    <audio data-key="80" src="Sounds/Magnet.wav"></audio>
+    <audio data-key="81" src="Sounds/note.wav"></audio>
+    <audio data-key="82" src="Sounds/page.wav"></audio>
+    <audio data-key="83" src="Sounds/punch.wav"></audio>
+    <audio data-key="84" src="Sounds/roar.wav"></audio>
+    <audio data-key="85" src="Sounds/sweep.wav"></audio>
+    <audio data-key="86" src="Sounds/train.wav"></audio>
+    <audio data-key="87" src="Sounds/violin.wav"></audio>
+    <audio data-key="88" src="Sounds/water.wav"></audio>
+    <audio data-key="89" src="Sounds/whistle.wav"></audio>
+    <audio data-key="90" src="Sounds/wood.wav"></audio>
+    <audio data-key="192" src="Sounds/woosh.wav"></audio>
+
+    <script>
+      function playSound(e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`) //audio element with data-key equal to keyCode
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`) //key class with data-key equal to keyCode
+        console.log(key)
+        if (!audio) return //stop the function
+        audio.currentTime = 0 //rewind to start
+        audio.play()
+        key.classList.add("playing")
+      }
+
+      function removeTransition(e) {
+        if (e.propertyName !== "transform") return //skip if not a transform
+        //console.log(e.propertyName);
+        this.classList.remove("playing")
+      }
+      const keys = document.querySelectorAll(".key")
+      keys.forEach((key) =>
+        key.addEventListener("transitionend", removeTransition)
+      )
+
+      window.addEventListener("keydown", playSound)
+    </script>
+  </body>
+</html>
