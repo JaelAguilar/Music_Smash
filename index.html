@@ -181,27 +181,50 @@
     <audio data-key="192" src="Sounds/woosh.wav"></audio>
 
     <script>
-      function playSound(e) {
-        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`) //audio element with data-key equal to keyCode
-        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`) //key class with data-key equal to keyCode
-        console.log(key)
-        if (!audio) return //stop the function
-        audio.currentTime = 0 //rewind to start
-        audio.play()
-        key.classList.add("playing")
+      //With this the sound is played and the key starts its animation
+      function playSound(e){
+        const audio = document.querySelector(`audio[data-key ="${e}"]`); //audio element with data-key equal to code
+        const key = document.querySelector(`.key[data-key="${e}"]`); //key class with data-key equal to code
+        //console.log(e);
+        if (audio){
+          audio.currentTime = 0; //Restart the time for sound
+          audio.play();
+          key.classList.add("playing"); //Start the animation
+        }
+      }
+      
+      //This is used when the keyboard is used
+      function keyPlay(e){
+        playSound(e.keyCode);
       }
 
       function removeTransition(e) {
         if (e.propertyName !== "transform") return //skip if not a transform
-        //console.log(e.propertyName);
-        this.classList.remove("playing")
+        this.classList.remove("playing") //Stop the animation
       }
+
       const keys = document.querySelectorAll(".key")
-      keys.forEach((key) =>
-        key.addEventListener("transitionend", removeTransition)
+
+      keys.forEach(function(key){ 
+        key.addEventListener("click",function(event){
+
+          playSound(this.getAttribute('data-key')); //Play when clicked
+
+        })
+
+        key.addEventListener("transitionend", removeTransition); //If the key transitioned, we remove it
+
+        /*if ("playing" in key.classList){
+
+          key.classList.remove("playing")         //Aparently this workaround doesn't work, sooo the bug will be still there
+        }*/
+
+      //keys.forEach(key => key.addEventListener("click"),playSound);
+      }
       )
 
-      window.addEventListener("keydown", playSound)
+      window.addEventListener("keydown", keyPlay) //Play when the keyboard is pressed
+
     </script>
   </body>
 </html>
